@@ -1,0 +1,36 @@
+{
+ "properties": {
+  "displayName": "PBC - Deny NSG outside of ECP owned Resource Group",
+  "policyType": "Custom",
+  "mode": "All",
+  "description": "This policy blocks an Network Security Group (NSG) from being created outside of an Enterprise Cloud Program (ECP) owned Resource Group.",
+  "metadata": {
+   "category": "Network",
+   "createdBy": "7e36e78a-dcd5-4f42-a351-fdba9c8f2954",
+   "createdOn": "2020-11-12T17:07:37.3095254Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "parameters": {},
+  "policyRule": {
+   "if": {
+    "anyOf": [
+     {
+      "field": "type",
+      "equals": "Microsoft.Network/networkSecurityGroups"
+     },
+     {
+      "field": "type",
+      "equals": "Microsoft.Network/networkSecurityGroups/securityRules"
+     }
+    ]
+   },
+   "then": {
+    "effect": "deny"
+   }
+  }
+ },
+ "id": "/subscriptions/eba6a0bc-7335-4ac0-b1e5-509712bad240/providers/Microsoft.Authorization/policyDefinitions/678eedd9-2660-4a16-98bb-3703d8d8f260",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "678eedd9-2660-4a16-98bb-3703d8d8f260"
+}

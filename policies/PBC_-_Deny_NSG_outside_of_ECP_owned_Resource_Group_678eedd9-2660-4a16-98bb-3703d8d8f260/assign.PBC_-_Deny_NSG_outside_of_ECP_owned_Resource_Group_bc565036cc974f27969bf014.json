@@ -1,0 +1,35 @@
+{
+ "sku": {
+  "name": "A0",
+  "tier": "Free"
+ },
+ "properties": {
+  "displayName": "PBC - Deny NSG outside of ECP owned Resource Group",
+  "policyDefinitionId": "/subscriptions/eba6a0bc-7335-4ac0-b1e5-509712bad240/providers/Microsoft.Authorization/policyDefinitions/678eedd9-2660-4a16-98bb-3703d8d8f260",
+  "scope": "/subscriptions/eba6a0bc-7335-4ac0-b1e5-509712bad240",
+  "notScopes": [
+   "/subscriptions/eba6a0bc-7335-4ac0-b1e5-509712bad240/resourceGroups/acp1-arg-t-net-01-nc-nsg",
+   "/subscriptions/eba6a0bc-7335-4ac0-b1e5-509712bad240/resourceGroups/acp1-arg-t-net-01-sc-nsg",
+   "/subscriptions/eba6a0bc-7335-4ac0-b1e5-509712bad240/resourceGroups/acp1-arg-t-net-01-e2-nsg",
+   "/subscriptions/eba6a0bc-7335-4ac0-b1e5-509712bad240/resourceGroups/acp1-arg-t-net-01-c-nsg",
+   "/subscriptions/eba6a0bc-7335-4ac0-b1e5-509712bad240/resourceGroups/acp1-arg-t-net-01-e-nsg",
+   "/subscriptions/eba6a0bc-7335-4ac0-b1e5-509712bad240/resourceGroups/acp1-arg-t-net-01-w-nsg",
+   "/subscriptions/eba6a0bc-7335-4ac0-b1e5-509712bad240/resourceGroups/acp1-arg-t-net-01-w2-nsg",
+   "/subscriptions/eba6a0bc-7335-4ac0-b1e5-509712bad240/resourceGroups/acp1-arg-t-net-01-wc-nsg"
+  ],
+  "parameters": {},
+  "description": "This policy blocks an Network Security Group (NSG) from being created outside of an Enterprise Cloud Program (ECP) owned Resource Group.",
+  "metadata": {
+   "assignedBy": "Brad Nissen",
+   "parameterScopes": {},
+   "createdBy": "7e36e78a-dcd5-4f42-a351-fdba9c8f2954",
+   "createdOn": "2020-11-12T17:09:07.8242672Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "enforcementMode": "Default"
+ },
+ "id": "/subscriptions/eba6a0bc-7335-4ac0-b1e5-509712bad240/providers/Microsoft.Authorization/policyAssignments/bc565036cc974f27969bf014",
+ "type": "Microsoft.Authorization/policyAssignments",
+ "name": "bc565036cc974f27969bf014"
+}
